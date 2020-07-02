@@ -274,7 +274,7 @@ select {
 		}
 
 		& > :last-child {
-			padding-bottom: 30px;
+			margin-bottom: 30px;
 		}
 
 		& > div {
@@ -399,9 +399,12 @@ select {
 						display: flex;
 						flex-direction: row;
 						flex-wrap: wrap;
-						justify-content: space-between;
+						justify-content: flex-start;
 						align-items: flex-start;
 						align-content: center;
+						@media only screen and (max-width: $width_2) {
+							justify-content: space-between;
+						}
 
 						&.list {
 							flex-direction: column;
@@ -412,12 +415,15 @@ select {
 							min-width: 330px;
 							box-shadow: 0 0 20px 0 #ccc;
 							margin-bottom: 30px;
+							margin-right: 30px;
 							@media only screen and (max-width: $width_1) {
 								width: 100% !important;
+								margin-right: 0;
 							}
 							@media only screen and (max-width: $width_2) {
 								min-width: 250px;
 								width: calc(50% - 10px);
+								margin-right: 0;
 							}
 
 							& .top {
