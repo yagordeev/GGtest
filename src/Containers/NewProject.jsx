@@ -17,7 +17,7 @@ function NewProject(props) {
 		img: null,
 		dateFrom: null,
 		dateTo: null,
-		status: null,
+		status: 'Проектируется',
 		percentageStatus: 0,
 		supervisor: null,
 		admin: null,

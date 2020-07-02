@@ -4,6 +4,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
+import Counter from '../Containers/Counter.jsx';
 
 function Account(props) {
 
@@ -25,6 +26,7 @@ function Account(props) {
 			<img src="/img/logo2.png" style={{height: '40px', padding: '5px 10px 30px 10px'}} alt="logo"/>
 			<div className={props.active === 'tasks' ? 'active' : ''} onClick={()=>openPage('tasks')} >
 				<DashboardIcon style={iconStyle}/> Задачи и работы
+				<Counter />
 			</div>
 			<div className={props.active === 'projects' ? 'active' : ''} onClick={()=>openPage('')} >
 				<DashboardIcon style={iconStyle}/> Проекты

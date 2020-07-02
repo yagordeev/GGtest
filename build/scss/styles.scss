@@ -244,14 +244,18 @@ select {
 	}
 
 	& .menu {
+		position: fixed;
+		height: 100%;
 		width: 20%;
 		background: #3c1073;
+		z-index: 9;
 		@media only screen and (min-width: $width_2) {
 			& .menu_icon {
 				display: none;
 			}
 		}
 		@media only screen and (max-width: $width_2) {
+			position: relative;
 			width: 100%;
 			max-height: 50px;
 			transition: max-height 0.5s ease;
@@ -291,12 +295,20 @@ select {
 				background: #24044b;
 			}
 		}
+
+		& span.counter {
+			color: #bbb;
+			padding: 0 10px;
+		}
 	}
 
 	& .mainBlock {
 		width: 80%;
+		position: relative;
+		left: 20%;
 		@media only screen and (max-width: $width_2) {
 			width: 100%;
+			left: 0;
 		}
 
 		& .header {
@@ -387,7 +399,7 @@ select {
 						display: flex;
 						flex-direction: row;
 						flex-wrap: wrap;
-						justify-content: flex-start;
+						justify-content: space-between;
 						align-items: flex-start;
 						align-content: center;
 
@@ -399,15 +411,11 @@ select {
 						& .project {
 							min-width: 330px;
 							box-shadow: 0 0 20px 0 #ccc;
-							margin-right: 30px;
 							margin-bottom: 30px;
 							@media only screen and (max-width: $width_1) {
 								width: 100% !important;
-								margin: 0 0 30px !important;
 							}
 							@media only screen and (max-width: $width_2) {
-								margin-right: 10px;
-								margin-bottom: 10px;
 								min-width: 250px;
 								width: calc(50% - 10px);
 							}
