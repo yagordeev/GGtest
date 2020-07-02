@@ -21,7 +21,6 @@ function Project(props) {
 	let dateFrom = newFrom.toLocaleDateString('ru-RU', options).replace(/\s*г\./, "");
 	let newTo = new Date(project.dateTo);
 	let dateTo = newTo.toLocaleDateString('ru-RU', options).replace(/\s*г\./, "");
-	console.log(project.dateTo, newTo, dateTo);
 
 	useEffect(() => {
 
